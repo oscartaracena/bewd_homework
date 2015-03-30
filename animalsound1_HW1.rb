@@ -36,25 +36,26 @@ Separate the animal sounds with commas like so: The animal goes cluck, cluck, cl
 Make sure you don't have an extraneous comma on the end of the sentence.
 - DONE: To handle the extra comma, a stupid little hack of - 1 from var_count and append 
 to end of output (animal_sound.downcase.strip + ".") to make sure the number is correct.
-
+# Did some 
 =end
 
 puts "Please enter an animal that you wish to make a sound? "
 animal_name = gets.chomp().downcase
 
 print "The animal is a " + animal_name
-puts "\n"
+puts "\n\n"
 
 puts "What sound does the " + animal_name + " do?"
-animal_sound = gets.chomp().downcase
-
+animal_sound = gets.chomp().downcase.strip #method chaining 
+puts "\n"
 puts "The number of times the you want to see the sound " + animal_sound +  " made?"
 #counter 
 var_count = gets.chomp()
 
+puts "\n"
 
-puts (animal_sound.downcase.strip + ", ") * (var_count.to_i  - 1) + 
-animal_sound.downcase.strip + "."
+puts (animal_sound + ", ") * (var_count.to_i  - 1) + 
+animal_sound + "." 
 
 
 	

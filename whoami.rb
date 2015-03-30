@@ -11,4 +11,4 @@ job = gets.chomp
 puts "what is your hidden talent?"
 talent = gets.chomp
 puts "My name is: " + name.downcase + " I grew up in " + city + " you work as a " + job + " your hidden talent is " + talent + "."
-puts "%s"+ " %s" %(name,city)
+puts "%s" + " %s" %(name,city)
